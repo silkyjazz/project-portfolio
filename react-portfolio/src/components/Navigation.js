@@ -10,7 +10,7 @@ function NavTabs({handlePageChange}) {
         <Container>
           <Nav className="me-auto">
           <Nav.Link href="#about" onClick={() => handlePageChange('About')}>About</Nav.Link>
-            <Nav.Link href="#portfolio" onClick={() => handlePageChange('Portfolio')}>Portolfio</Nav.Link>
+            <Nav.Link href="#portfolio" onClick={() => handlePageChange('Portfolio')}>Portfolio</Nav.Link>
             <Nav.Link href="#contact" onClick={() => handlePageChange('Contact')}>Contact</Nav.Link>
             <Nav.Link href="#resume" onClick={() => handlePageChange('Resume')}>Resume</Nav.Link>
           </Nav>

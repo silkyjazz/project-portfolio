@@ -9,7 +9,7 @@ import Resume from './pages/resume';
 export default function Header() {
   const [currentPage, setCurrentPage] = useState('About');
 
-  // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
+
   const renderPage = () => {
     if (currentPage === 'About') {
       return <About />;
@@ -22,20 +22,6 @@ export default function Header() {
     }
     return <Resume />;
   };
-
-
-  // const renderPage = () => {
-  //   switch (currentPage) {
-  //     case 'Home':
-  //       return <Home />;
-  //     case 'About':
-  //       return <About />;
-  //     case 'Blog':
-  //       return <Blog />;
-  //     default:
-  //       return <Contact />;
-  //   }
-  // };
 
   const handlePageChange = (page) => setCurrentPage(page);
 

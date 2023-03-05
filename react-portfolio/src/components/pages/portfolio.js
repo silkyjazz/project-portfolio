@@ -1,21 +1,52 @@
 import React from 'react';
+import '../../App.css'
+import { Card, Col, Row } from 'react-bootstrap';
+import jate from '../../images/text-editor.png';
+import noteTaker from '../../images/javascript-quiz.png';
+import pwgenerator from '../../images/password-generator.png';
+// import image4 from './image4.jpg';
+// import image5 from './image5.jpg';
+// import image6 from './image6.jpg';
 
-export default function Portfolio() {
+const cardData = [
+  {
+    title: 'J.A.T.E',
+    image: jate,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    link: 'https://www.google.com',
+  },
+  {
+    title: 'Javascript Quiz',
+    image: noteTaker,
+    description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    link: 'https://example.com',
+  },
+  {
+    title: 'Password Generator',
+    image: pwgenerator,
+    description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    link: 'https://example.com',
+  },
+  // Don't forget to add more projects
+];
+
+const CardSection = () => {
+  const styles ={
+    margin:"20px"
+  }
   return (
-    <div>
-      <h1>Portfolio Page</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
-        velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
-        ac dui fermentum, sed luctus urna tincidunt. Etiam ut feugiat ex. Cras
-        non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna imperdiet
-        ac. Sed nec nulla aliquam, bibendum odio eget, vestibulum tortor. Cras
-        rutrum ligula in tincidunt commodo. Morbi sit amet mollis orci, in
-        tristique ex. Donec nec ornare elit. Donec blandit est sed risus feugiat
-        porttitor. Vestibulum molestie hendrerit massa non consequat. Vestibulum
-        vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus.
-      </p>
-    </div>
+    <Row style={styles}>
+      {cardData.map((card, index) => (
+        <Col key={index} md={4} className="mb-4">
+          <Card className="portfolio-item">
+            <Card.Img variant="top" href={card.link} src={card.image}/>
+              <Card.Text className="card-text">{card.title}<br/>{card.description}</Card.Text>
+          </Card>
+        </Col>
+      ))}
+    </Row>
   );
-}
+};
+
+export default CardSection;
+
