@@ -1,0 +1,44 @@
+.header {
+    background-image: url('../src/images/text-editor.png');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header__logo {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 2rem;
+  }
+  
+  .header__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header__nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header__nav li {
+    margin-right: 2rem;
+  }
+  
+  .header__nav li:last-child {
+    margin-right: 0;
+  }
+  
+  .header__nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  

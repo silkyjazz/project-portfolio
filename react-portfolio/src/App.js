@@ -1,9 +1,16 @@
-import ProjectContainer from "./components/Project";
-
+import Header from "./components/Header";
+import Footer from './components/Footer';
+import './App.css';
 function App() {
   return (
-    <ProjectContainer/>
+    <div>
+    <Header/>
+    <Footer/>
+    </div>
+  
   );
 }
 
 export default App;
+
+
