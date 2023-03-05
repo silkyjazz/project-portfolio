@@ -5,15 +5,17 @@ import {Fade, Zoom} from 'react-awesome-reveal'
 export default function About() {
   const styles = {
     margin: "20px",
-    marginLeft: "120px",
-    padding: "20px",
+    // marginLeft: "120px",
+    // padding: "20px",
   };
   const sectionStyle = {
     justifyContent: "center",
-    padding: "30px",
+    padding: "10px",
+    fontSize:"20px"
   };
   const imgStyle = {
-    height: "350px",
+    height: "400px",
+    marginRight:"-70px"
   };
 
   return (

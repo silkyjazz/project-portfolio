@@ -2,9 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Newsreader:ital,opsz,wght@1,6..72,200&family=Poppins&family=Source+Serif+Pro:wght@600&display=swap');
 
 *{
-  background-color: #A0AECD;
-  /* color: #cce3de; */
+  /* background-color: #A0AECD; */
+  background-color:  #BC999A;
+  /* color: #CC313D; */
 }
+/* .navigation{
+  background-color:#CC313D; 
+  color: #F7C5CC;
+} */
 .about-me-section{
   font-family: 'Source Serif Pro', serif;
 }
@@ -17,6 +22,7 @@ li{
 }
 .name-title{
   font-family: 'DM Serif Display', serif;
+  font-size: 60px;
 }
 .portfolio-item {
   position: relative;
@@ -29,6 +35,8 @@ h3{
 #links{
   font-family: 'Newsreader', serif;
   font-size: 30px;
+  color: #F7C5CC;
+  
 }
 .portfolio-item:hover {
   opacity: 0.5;
@@ -87,6 +95,10 @@ h3{
   .card-text {
     font-size: 16px;
   }
+}
+.resume-link{
+  text-decoration: none;
+  color: #000;
 }
 
 /* Mobile styles */

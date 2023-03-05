@@ -1,7 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Col, Row } from "react-bootstrap";
-import {Fade} from 'react-awesome-reveal'
+import {Fade} from 'react-awesome-reveal';
+import resume from '../../pdfs/Jasmine-Ulloa-Resume.pdf'
+
 export default function Resume() {
   const styles = {
     margin: "20px",
@@ -11,7 +13,10 @@ export default function Resume() {
   return (
     <div style={styles}>
       <h1 className="page-title">Resume</h1>
-      <p>Download my resume</p>
+      <a href={resume} download="Jasmine-Ulloa-Resume.pdf" className="resume-link">
+        <p>Download my resume</p>
+      </a>
+
       <Container>
         <Row>
           <Col sm={6}>
