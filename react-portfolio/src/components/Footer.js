@@ -10,8 +10,8 @@ export default function Footer() {
     margin: "10px",
   };
   return (
-    <footer>
-      <p style={{ display: "flex", justifyContent: "center" }}>
+    <footer style={{ display: "flex", justifyContent: "center"}}>
+      <p>
         <a href="https://github.com/silkyjazz" target="blank"  className="icon">
           <FontAwesomeIcon
             icon={["fab", "github"]}
@@ -33,6 +33,12 @@ export default function Footer() {
           style={iconStyle}
           className="icon"
         />
+                <a href="https://www.pinterest.com/silkyjazz222/" target="blank" className="icon">
+                  <FontAwesomeIcon 
+                  icon="fa-brands fa-pinterest" 
+                  size="2x"
+                  style={iconStyle}/>
+        </a>
       </p>
     </footer>
   );
