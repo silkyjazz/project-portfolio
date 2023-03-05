@@ -1,0 +1,21 @@
+{
+  "name": "react-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silkyjazz/react-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silkyjazz/react-portfolio/issues"
+  },
+  "homepage": "https://github.com/silkyjazz/react-portfolio#readme"
+}
