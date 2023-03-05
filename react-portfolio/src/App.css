@@ -25,3 +25,10 @@
   visibility: visible;
   opacity: 1;
 } 
+.icon{
+  color: #000;
+}
+.icon:hover{
+  opacity: 0.5;
+  color: #000;
+}
