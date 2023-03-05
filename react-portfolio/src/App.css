@@ -7,20 +7,6 @@
   opacity: 0.5;
 }
 
-/* .card-title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  color: #fff; 
-  font-size: 18px;
-  /* background: black;  */
-  /* text-align: center;
-  opacity: 0; 
-  transition: visibility 0s, opacity 0.5s ease-in-out;  */
-/* } */ 
-
 .card-text {
   position: absolute;
   bottom: 0;
@@ -29,10 +15,8 @@
   transform: translateY(-50%);
   width: 100%;
   padding: 20px;
-  /* background-color: black;  */
   color: #fff; 
   font-size: 18px;
-  
   text-align: center;
   opacity: 0; 
   transition: visibility 0s, opacity 0.5s ease-in-out; 
@@ -41,7 +25,3 @@
   visibility: visible;
   opacity: 1;
 } 
-/* .card:hover .card-title {
-  visibility: visible;
-  opacity: 1;
-}  */

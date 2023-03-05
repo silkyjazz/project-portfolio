@@ -1,8 +1,10 @@
 import React from 'react';
 import profilePic from '../../images/profile-pic.png';
 export default function About() {
+  const styles ={
+    margin:"20px"
+  }
     const sectionStyle= {
-        // display:"flex",
         justifyContent: "center",
         padding: "60px"
     }
@@ -13,7 +15,7 @@ export default function About() {
     }
 
   return (
-    <div>
+    <div style={styles}>
       <h1 style={{ display: 'flex', justifyContent: 'center' }}>Jasmine Ulloa</h1>
       <img src={profilePic} alt="Jasmine Ulloa" style={imgStyle}/>
       <p style={sectionStyle}>
