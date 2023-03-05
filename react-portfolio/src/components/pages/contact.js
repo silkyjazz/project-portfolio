@@ -1,17 +1,61 @@
 import React from "react";
+import { useState } from 'react';
 import {Fade} from 'react-awesome-reveal';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {Button, Form, Container, Row, Col} from 'react-bootstrap';
-// import Button from "react-bootstrap/Button";
-// import Form from "react-bootstrap/Form";
-// import Container from "react-bootstrap/Container";
-// import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
 
 export default function Contact() {
   const styles = {
     marginLeft: "60px",
     padding: "40px",
+  };
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState({});
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleMessageChange = (event) => {
+    setMessage(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (!name) {
+      setErrors({ ...errors, name: 'Name is required' });
+      return;
+    }
+    if (!email) {
+      setErrors({ ...errors, email: 'Email is required' });
+      return;
+    }
+    if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+      setErrors({ ...errors, email: 'Invalid email address' });
+      return;
+    }
+    if (!message) {
+      setErrors({ ...errors, message: 'Message is required' });
+      return;
+    }
+       // Check that all fields are filled
+       if (!name || !email || !message) {
+        setErrors({ ...errors, message: 'Message is required' });
+        return;
+      }
+    // handle form submission here
+    console.log('Form submitted:', { name, email, message });
+    // clear the form fields
+    setName('');
+    setEmail('');
+    setMessage('');
+    setErrors({});
   };
   return (
     <div>
@@ -19,27 +63,45 @@ export default function Contact() {
       <Container>
         <Row>
           <Col sm={6}>
-            <Form>
-              <Form.Group className="mb-3" controlId="formBasicName">
-                <Form.Label>Name</Form.Label>
-                <Form.Control type="text" placeholder="Name" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-              </Form.Group>
+          <Form onSubmit={handleSubmit} >
+                <Form.Group className="mb-3" controlId="formBasicName">
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Jane Smith"
+                    value={name}
+                    onChange={handleNameChange}
+                    required
+                  />
+                  {errors.name && <Form.Text className="text-danger">{errors.name}</Form.Text>}
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Email address</Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="email@example.com"
+                    value={email}
+                    onChange={handleEmailChange}
+                    required
+                  />
+                  {errors.email && <Form.Text className="text-danger">{errors.email}</Form.Text>}
+                </Form.Group>
 
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlTextarea1"
-              >
-                <Form.Label>Message</Form.Label>
-                <Form.Control as="textarea" rows={3} />
-              </Form.Group>
-              <Button variant="secondary" type="submit">
-                Send
-              </Button>
-            </Form>  
+                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                  <Form.Label>Message</Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    rows={3}
+                    value={message}
+                    onChange={handleMessageChange}
+                    required
+                  />
+                  {errors.message && <Form.Text className="text-danger">{errors.message}</Form.Text>}
+                </Form.Group>
+                <Button variant="secondary" type="submit">
+                  Send
+                </Button>
+              </Form>
           </Col>
           <Col lg={6} sm={6}>
             <h3>I'd love to hear from you   <FontAwesomeIcon icon="fa-solid fa-heart" /></h3>
