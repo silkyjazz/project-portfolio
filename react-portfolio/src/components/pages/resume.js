@@ -57,6 +57,8 @@ export default function Resume() {
               <li>Rest API</li>
               <li>Express.js</li>
               <li>Node.js</li>
+              <li>Graphql</li>
+              <li>Apollo Server</li>
             
             </ul></Fade>
           </Col>

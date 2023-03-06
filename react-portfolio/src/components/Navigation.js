@@ -17,10 +17,12 @@ function NavTabs({ handlePageChange }) {
               Jasmine Ulloa
             </h1>
           </Navbar.Brand>
+
           <Nav className="navigation me-auto" id="links">
             <Nav.Link 
             className="navigation"
-            href="#about" onClick={() => handlePageChange("About")}>
+            href="#about"  onClick={() => handlePageChange("About")}
+            >
               About
             </Nav.Link>
             <Nav.Link

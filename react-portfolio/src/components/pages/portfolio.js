@@ -4,17 +4,11 @@ import { Container, Card, Col, Row } from "react-bootstrap";
 import jate from "../../images/text-editor.png";
 import noteTaker from "../../images/note-taker.png";
 import pwgenerator from "../../images/password-generator.png";
-import weatherDashboard from "../../images/1.png";
+import weatherDashboard from "../../images/weather-dashboard.png";
 import jsQuiz from "../../images/javascript-quiz.png";
+import employeeTracker from '../../images/employee-tracker.png';
 
 const cardData = [
-  {
-    title: "J.A.T.E",
-    image: jate,
-    description:
-      "A simple text editor that runs in the browser and meets the PWA criteria.",
-    link: "https://github.com/silkyjazz/text-editor",
-  },
   {
     title: "Note Taker",
     image: noteTaker,
@@ -42,10 +36,24 @@ const cardData = [
       "An application that tests your javascript knowledge. Uses a timer and shows your score.",
     link: "https://github.com/silkyjazz/javascript-quiz",
   },
-  // Don't forget to add more projects
+  {
+    title: "J.A.T.E",
+    image: jate,
+    description:
+      "A simple text editor that runs in the browser and meets the PWA criteria.",
+    link: "https://github.com/silkyjazz/text-editor",
+  },
+  {
+    title: "Employee Tracker",
+    image: employeeTracker,
+    description:
+      "A content management system that allows the user to easily view and interact with information stored in a database",
+    link: "https://github.com/silkyjazz/employee-tracker",
+  },
+
 ];
 
-const CardSection = () => {
+export default function Portfolio () {
   const styles = {
     marginLeft: "60px",
     padding: "40px",
@@ -56,7 +64,6 @@ const CardSection = () => {
         Portfolio
       </h1>
       <Container style={styles}>
-      
           <Row>
             {cardData.map((card, index) => (
               <Col key={index} md={4} className="mb-4">
@@ -76,4 +83,4 @@ const CardSection = () => {
   );
 };
 
-export default CardSection;
+// export default CardSection;

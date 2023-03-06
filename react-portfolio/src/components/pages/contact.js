@@ -44,14 +44,11 @@ export default function Contact() {
       setErrors({ ...errors, message: 'Message is required' });
       return;
     }
-       // Check that all fields are filled
        if (!name || !email || !message) {
         setErrors({ ...errors, message: 'Message is required' });
         return;
       }
-    // handle form submission here
     console.log('Form submitted:', { name, email, message });
-    // clear the form fields
     setName('');
     setEmail('');
     setMessage('');
