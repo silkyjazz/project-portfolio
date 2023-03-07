@@ -21,7 +21,7 @@ export default function Resume() {
         <Row>
           <Col sm={6}>
             <h2><FontAwesomeIcon icon="fa-solid fa-laptop-code" />Front-end proficiencies</h2>
-            <Fade cascade>
+            <Fade delay={100} cascade triggerOnce>
             <ul>
               <li>HTML</li>
               <li>Cascading Style Sheets (CSS)</li>
@@ -43,7 +43,7 @@ export default function Resume() {
           </Col>
           <Col sm={6}>
             <h2><FontAwesomeIcon icon="fa-solid fa-server" /> Back-end proficiencies</h2>
-            <Fade cascade>
+            <Fade delay={100} triggerOnce cascade>
             <ul>
               <li>Unit Testing w/ JEST</li>
               <li>Object-oriented Programming (OOP)</li>

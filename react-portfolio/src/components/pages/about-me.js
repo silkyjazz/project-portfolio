@@ -2,36 +2,33 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import profilePic from "../../images/profile-pic.png";
 import {Fade, Zoom} from 'react-awesome-reveal'
+
+
+
+
 export default function About() {
+
   const styles = {
-    margin: "20px",
-    // marginLeft: "120px",
-    // padding: "20px",
+    margin: "20px"
   };
   const sectionStyle = {
     justifyContent: "center",
     padding: "10px",
     fontSize:"20px"
   };
-  const imgStyle = {
-    height: "400px",
-    marginRight:"-70px"
-  };
 
   return (
     <div style={styles}>
       <Container>
         <Row>
-          <Col sm={12} md={6} lg={6}>
-            <Zoom direction="in">
-            <img src={profilePic} alt="Jasmine Ulloa" style={imgStyle} />        
+          <Col sm={12} md={12} lg={6}>
+            <Zoom delay={100} cascade triggerOnce direction="in">
+            <img src={profilePic} alt="Jasmine Ulloa" className="profile-img" />        
             </Zoom>
-    
           </Col>
-          <Col sm={12} md={6} lg={6}>  
-          
-          <Fade direction="up">
-            <h1 className="page-title" style={{ display: "flex", justifyContent: "center" }}>About Me</h1>
+          <Col sm={12} md={12} lg={6} className="about-me-container">  
+          <Fade delay={100} cascade triggerOnce direction="up">
+            <h1 className="page-title" style={{ display: "flex", justifyContent: "center" }} id="about-me-title">About Me</h1>
               <p className="about-me-section" style={sectionStyle}>
                 Hello and welcome! My name is Jasmine Ulloa, and I'm a full stack
                 developer. I have a strong passion for technology and I'm

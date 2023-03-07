@@ -10,6 +10,10 @@
   background-color:#CC313D; 
   color: #F7C5CC;
 } */
+.profile-img{
+  height: 400px;
+  margin-right:-70px;
+}
 .about-me-section{
   font-family: 'Source Serif Pro', serif;
 }
@@ -83,7 +87,7 @@ h3{
   }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .page-title {
     font-size: 24px;
   }
@@ -95,18 +99,89 @@ h3{
   .card-text {
     font-size: 16px;
   }
-}
+
+} */
 .resume-link{
   text-decoration: none;
   color: #000;
 }
 
-/* Mobile styles */
-@media (max-width: 576px) {
-  .page-title {
-    font-size: 20px;
+
+
+/* Tablet styles */
+@media (max-width: 1060px) {
+  .name-title {
+    font-size: 40px;
   }
 
+  .page-title {
+    font-size: 24px;
+  }
+
+  .about-me-section {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .card-text {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .profile-img{
+    height: 300px;
+  }
+  .navigation{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 750px) {
+  .name-title {
+    font-size: 35px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+  .about-me-section-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about-me-section {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .card-text {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .profile-img{
+    height: 300px;
+    margin-left: 100px;
+  }
+  .navigation{
+    font-size: 10px;
+  }
+  
+}
+
+
+/* Mobile styles */
+@media (max-width: 576px) {
+  .name-title {
+    font-size: 32px;
+    margin-left: 15px;
+    /* margin-top: 40px; */
+  }
+
+  .page-title {
+    font-size: 30px;
+  }
+  #about-me-title{
+    margin-left: -40px;
+  }
   .about-me-section {
     font-size: 12px;
     padding: 10px;
@@ -115,5 +190,37 @@ h3{
   .card-text {
     font-size: 14px;
     padding: 10px;
+  }
+
+  .portfolio-item {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .portfolio-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-text {
+    padding: 5px;
+  }
+
+  .resume-link {
+    font-size: 14px;
+  }
+  .profile-img{
+    height: 300px;
+    align-content: center;
+    margin-left: -50px;
+  }
+  #links{
+    font-size: 25px;
+   
+  }
+  #nav-toggle{
+    margin: 25px;
+    margin-top: -100px;
   }
 }
